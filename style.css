@@ -33,14 +33,15 @@ footer {
 /*
   IMAGEN DE FONDO DEL ENCABEZADO: background-image con un degradado
   oscuro encima (linear-gradient) para que el título en blanco se lea
-  bien sobre la foto. Coloca tu imagen "fondo-encabezado.jpg" dentro
-  de la carpeta imagenes/.
+  bien sobre la imagen. La imagen "fondo-encabezado.svg" combina los
+  tres proyectos: código (blog), cancha y estadísticas (fútbol) y
+  cartas coleccionables (tienda Topps).
 */
 #encabezado-hero {
     min-height: 60vh;
     background-image:
-        linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.85)),
-        url("imagenes/fondo-encabezado.jpg");
+        linear-gradient(rgba(13, 17, 23, 0.45), rgba(13, 17, 23, 0.65)),
+        url("imagenes/fondo-encabezado.svg");
     background-size: cover;
     background-position: center;
 }

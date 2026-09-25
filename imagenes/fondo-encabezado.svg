@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!--
+    Imagen del encabezado de Inicio: combina los tres proyectos del portafolio.
+    Izquierda: ventana de código (Blog de tecnología Front-End).
+    Centro: cancha, balón y gráfica de barras (Estadísticas de fútbol).
+    Derecha: cartas coleccionables (Tienda de cartas Topps).
+  -->
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#132a3a"/>
+      <stop offset="1" stop-color="#0f3d2e"/>
+    </linearGradient>
+    <linearGradient id="barra" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2ecc71"/>
+      <stop offset="1" stop-color="#198754"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#fondo)"/>
+
+  <!-- ===== Centro: cancha de fútbol ===== -->
+  <g fill="none" stroke="#2ecc71" stroke-opacity="0.25" stroke-width="4">
+    <rect x="80" y="60" width="1440" height="780" rx="10"/>
+    <line x1="800" y1="60" x2="800" y2="840"/>
+    <circle cx="800" cy="450" r="130"/>
+    <rect x="80" y="260" width="200" height="380"/>
+    <rect x="1320" y="260" width="200" height="380"/>
+  </g>
+
+  <!-- Gráfica de barras (estadísticas) -->
+  <g opacity="0.55">
+    <rect x="620" y="620" width="50" height="160" rx="6" fill="url(#barra)"/>
+    <rect x="690" y="560" width="50" height="220" rx="6" fill="url(#barra)"/>
+    <rect x="760" y="650" width="50" height="130" rx="6" fill="url(#barra)"/>
+    <rect x="830" y="520" width="50" height="260" rx="6" fill="url(#barra)"/>
+    <rect x="900" y="590" width="50" height="190" rx="6" fill="url(#barra)"/>
+    <polyline points="645,600 715,540 785,630 855,500 925,570" fill="none" stroke="#f1c40f" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Balón de fútbol -->
+  <g transform="translate(800 190)" opacity="0.8">
+    <circle r="70" fill="#f5f5f5"/>
+    <polygon points="0,-26 25,-8 15,21 -15,21 -25,-8" fill="#1b1b1b"/>
+    <g stroke="#1b1b1b" stroke-width="4">
+      <line x1="0" y1="-26" x2="0" y2="-68"/>
+      <line x1="25" y1="-8" x2="65" y2="-22"/>
+      <line x1="15" y1="21" x2="40" y2="56"/>
+      <line x1="-15" y1="21" x2="-40" y2="56"/>
+      <line x1="-25" y1="-8" x2="-65" y2="-22"/>
+    </g>
+    <circle r="70" fill="none" stroke="#1b1b1b" stroke-width="3"/>
+  </g>
+
+  <!-- ===== Izquierda: ventana de código (blog) ===== -->
+  <g transform="translate(150 250) rotate(-6)" opacity="0.9">
+    <rect width="420" height="300" rx="14" fill="#161b22" stroke="#30363d" stroke-width="3"/>
+    <rect width="420" height="40" rx="14" fill="#21262d"/>
+    <rect y="26" width="420" height="14" fill="#21262d"/>
+    <circle cx="24" cy="20" r="7" fill="#ff5f56"/>
+    <circle cx="46" cy="20" r="7" fill="#ffbd2e"/>
+    <circle cx="68" cy="20" r="7" fill="#27c93f"/>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="22">
+      <text x="24" y="85" fill="#ff7b72">&lt;header&gt;</text>
+      <text x="54" y="120" fill="#79c0ff">&lt;h1&gt;<tspan fill="#e6edf3">Front-End</tspan>&lt;/h1&gt;</text>
+      <text x="24" y="155" fill="#ff7b72">&lt;/header&gt;</text>
+      <text x="24" y="200" fill="#d2a8ff">.card <tspan fill="#e6edf3">{</tspan></text>
+      <text x="54" y="235" fill="#79c0ff">display<tspan fill="#e6edf3">: </tspan><tspan fill="#a5d6ff">flex</tspan><tspan fill="#e6edf3">;</tspan></text>
+      <text x="24" y="270" fill="#e6edf3">}</text>
+    </g>
+  </g>
+  <!-- Símbolo de código grande -->
+  <text x="250" y="720" font-family="Consolas, 'Courier New', monospace" font-size="120" font-weight="bold" fill="#58a6ff" fill-opacity="0.5">&lt;/&gt;</text>
+
+  <!-- ===== Derecha: cartas coleccionables (tienda) ===== -->
+  <g transform="translate(1130 230) rotate(-12)" opacity="0.75">
+    <rect width="200" height="280" rx="12" fill="#ffffff"/>
+    <rect x="12" y="12" width="176" height="200" rx="6" fill="#0d6efd"/>
+    <circle cx="100" cy="95" r="34" fill="#cfe2ff"/>
+    <path d="M45 212 Q100 130 155 212 Z" fill="#cfe2ff"/>
+    <rect x="12" y="222" width="176" height="44" rx="6" fill="#0a58ca"/>
+  </g>
+  <g transform="translate(1220 250) rotate(4)" opacity="0.85">
+    <rect width="200" height="280" rx="12" fill="#ffffff"/>
+    <rect x="12" y="12" width="176" height="200" rx="6" fill="#dc3545"/>
+    <circle cx="100" cy="95" r="34" fill="#f8d7da"/>
+    <path d="M45 212 Q100 130 155 212 Z" fill="#f8d7da"/>
+    <rect x="12" y="222" width="176" height="44" rx="6" fill="#b02a37"/>
+  </g>
+  <g transform="translate(1170 300) rotate(16)" opacity="0.95">
+    <rect width="200" height="280" rx="12" fill="#ffffff"/>
+    <rect x="12" y="12" width="176" height="200" rx="6" fill="#198754"/>
+    <circle cx="100" cy="95" r="34" fill="#d1e7dd"/>
+    <path d="M45 212 Q100 130 155 212 Z" fill="#d1e7dd"/>
+    <rect x="12" y="222" width="176" height="44" rx="6" fill="#146c43"/>
+    <text x="100" y="252" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">TOPPS</text>
+    <rect x="130" y="22" width="48" height="24" rx="4" fill="#f1c40f"/>
+    <text x="154" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1b1b1b">RC</text>
+  </g>
+</svg>
