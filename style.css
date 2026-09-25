@@ -1,0 +1,215 @@
+/* ==========================================================
+   PORTAFOLIO WEB - GJ Medina
+   ==========================================================
+   Este archivo se carga DESPUÉS de Bootstrap y demuestra CSS
+   propio encima del framework:
+   1. Selectores de ELEMENTO
+   2. Selectores de ID
+   3. Selectores de CLASE
+   4. El MODELO DE CAJA
+   5. Ajustes RESPONSIVOS adicionales
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. SELECTOR DE ELEMENTO
+   ---------------------------------------------------------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #0d1117;
+}
+
+footer {
+    background-color: #161b22;
+    color: #9aa4af;
+}
+
+/* ----------------------------------------------------------
+   2. SELECTORES DE ID
+   ---------------------------------------------------------- */
+#menu-principal {
+    background-color: #0f2419;
+}
+
+/*
+  IMAGEN DE FONDO DEL ENCABEZADO: background-image con un degradado
+  oscuro encima (linear-gradient) para que el título en blanco se lea
+  bien sobre la foto. Coloca tu imagen "fondo-encabezado.jpg" dentro
+  de la carpeta imagenes/.
+*/
+#encabezado-hero {
+    min-height: 60vh;
+    background-image:
+        linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.85)),
+        url("imagenes/fondo-encabezado.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----------------------------------------------------------
+   3. SELECTORES DE CLASE
+   ---------------------------------------------------------- */
+
+/*
+  CARTAS TOPPS: foto del deportista dentro de un marco blanco, con la
+  etiqueta TOPPS arriba y una franja con el nombre abajo, del color
+  del deporte (como una carta coleccionable real).
+*/
+.carta-topps {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 5 / 7;
+    margin: 12px 12px 0;
+    border: 6px solid #f5f5f5;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.carta-topps img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carta-topps .marca {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #d6001c;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.carta-topps .franja {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 4px;
+    border-top: 3px solid #f5f5f5;
+}
+
+.carta-topps .jugador { font-weight: 700; font-size: 1.05rem; line-height: 1.2; }
+.carta-topps .equipo { font-size: 0.75rem; opacity: 0.9; }
+
+.carta-futbol .franja { background: linear-gradient(90deg, #1e3a8a, #0ea5e9); }
+.carta-beisbol .franja { background: linear-gradient(90deg, #7f1d1d, #ea580c); }
+.carta-baloncesto .franja { background: linear-gradient(90deg, #581c87, #f59e0b); }
+.carta-f1 .franja { background: linear-gradient(90deg, #111827, #dc2626); }
+
+/*
+  PORTADAS DEL BLOG: franja de color con el logo de la tecnología
+  centrado en la parte superior de cada artículo.
+*/
+.portada-blog {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.portada-blog img {
+    max-height: 110px;
+    max-width: 70%;
+}
+
+.portada-html { background: linear-gradient(135deg, #fdece3, #f6c7ac); }
+.portada-css { background: linear-gradient(135deg, #e3ecfb, #b9cdf3); }
+.portada-js { background: linear-gradient(135deg, #2b2503, #57500a); }
+.portada-bootstrap { background: linear-gradient(135deg, #1e0b3b, #4c1d95); }
+.portada-react { background: linear-gradient(135deg, #04161f, #0e3a4f); }
+.portada-accesibilidad { background: linear-gradient(135deg, #e0ecf8, #bcd4ee); }
+
+/* Símbolo de cada competición junto al texto de su pestaña */
+.logo-liga {
+    height: 22px;
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/*
+  TABLAS DE POSICIONES: una franja de color a la izquierda de cada
+  fila indica la zona de clasificación del equipo.
+*/
+.tabla-posiciones tbody tr td:first-child {
+    border-left: 4px solid transparent;
+}
+
+.tabla-posiciones .zona-champions td:first-child { border-left-color: #10b981; }
+.tabla-posiciones .zona-europa td:first-child { border-left-color: #f59e0b; }
+.tabla-posiciones .zona-conference td:first-child { border-left-color: #3b82f6; }
+.tabla-posiciones .zona-descenso td:first-child { border-left-color: #ef4444; }
+
+.leyenda .muestra {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.leyenda .zona-champions { background-color: #10b981; }
+.leyenda .zona-europa { background-color: #f59e0b; }
+.leyenda .zona-conference { background-color: #3b82f6; }
+.leyenda .zona-descenso { background-color: #ef4444; }
+
+/* ----------------------------------------------------------
+   4. MODELO DE CAJA (Box Model)
+   Cada tarjeta propia sobrescribe el padding, borde y sombra de
+   una tarjeta normal de Bootstrap para que se vea distinta.
+   ---------------------------------------------------------- */
+.tarjeta-perfil {
+    box-sizing: border-box;
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+}
+
+.tarjeta-proyecto {
+    box-sizing: border-box;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+    padding: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 185, 129, 0.25);
+}
+
+.tarjeta-contacto {
+    box-sizing: border-box;
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+/* ----------------------------------------------------------
+   5. AJUSTES RESPONSIVOS ADICIONALES
+   El grid de Bootstrap ya apila las columnas en pantallas
+   pequeñas; esta media query añade ajustes propios.
+   ---------------------------------------------------------- */
+@media (max-width: 576px) {
+    #encabezado-hero {
+        min-height: 45vh;
+    }
+
+    #encabezado-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    #encabezado-hero .lead {
+        font-size: 1rem;
+    }
+}

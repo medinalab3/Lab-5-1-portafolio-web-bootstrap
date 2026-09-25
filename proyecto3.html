@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!-- Página de detalle del proyecto 3: Blog de tecnología sobre desarrollo front-end -->
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de tecnología | GJ Medina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="menu-principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">GJ Medina</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+                        aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portafolio.html">Portafolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="portafolio.html">Portafolio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog de tecnología</li>
+            </ol>
+        </nav>
+
+        <span class="badge text-bg-success mb-2">Blog</span>
+        <h1>Blog de tecnología: Front-End</h1>
+        <p class="lead">Artículos sobre HTML, CSS, JavaScript, frameworks y accesibilidad para crear interfaces web.</p>
+
+        <h2 class="h4">Descripción</h2>
+        <p>
+            Blog de tecnología centrado en el desarrollo front-end. Cada artículo se muestra en
+            una tarjeta con imagen, categoría, título, resumen, fecha y tiempo de lectura. El
+            botón "Leer artículo" despliega el texto completo sin salir de la página, y el menú
+            de categorías filtra los artículos por tema.
+        </p>
+
+        <!-- Menú de categorías -->
+        <nav class="mt-4 mb-3" aria-label="Categorías del blog">
+            <div class="btn-group flex-wrap" role="group" id="categorias">
+                <button type="button" class="btn btn-outline-success active" data-categoria="todas">Todas</button>
+                <button type="button" class="btn btn-outline-success" data-categoria="html">HTML</button>
+                <button type="button" class="btn btn-outline-success" data-categoria="css">CSS</button>
+                <button type="button" class="btn btn-outline-success" data-categoria="javascript">JavaScript</button>
+                <button type="button" class="btn btn-outline-success" data-categoria="frameworks">Frameworks</button>
+                <button type="button" class="btn btn-outline-success" data-categoria="accesibilidad">Accesibilidad</button>
+            </div>
+        </nav>
+
+        <!-- Lista de artículos -->
+        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4" id="articulos" aria-label="Artículos">
+            <!-- Artículo 1 -->
+            <div class="col" data-categoria="html">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-html">
+                        <img src="imagenes/blog/html5.svg" alt="Logo de HTML5">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-danger align-self-start mb-2">HTML</span>
+                        <h3 class="card-title h5">HTML semántico: por qué importa</h3>
+                        <p class="card-text">
+                            Usar las etiquetas correctas mejora la accesibilidad, el SEO y hace que
+                            el código sea más fácil de leer y mantener.
+                        </p>
+                        <div class="collapse" id="art-1">
+                            <p>
+                                Un <code>&lt;div&gt;</code> no dice nada sobre su contenido. En cambio,
+                                <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                                <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;footer&gt;</code>
+                                le indican al navegador, a los lectores de pantalla y a los buscadores qué
+                                papel cumple cada parte de la página.
+                            </p>
+                            <p>
+                                Una buena regla: si el contenido tiene sentido por sí solo (una noticia, una
+                                publicación), usa <code>&lt;article&gt;</code>; si es un grupo temático dentro
+                                de algo mayor, usa <code>&lt;section&gt;</code>. Y respeta la jerarquía de
+                                títulos: un solo <code>&lt;h1&gt;</code> por página y sin saltar niveles.
+                            </p>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-02">2 sep 2026</time> · 4 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-1" aria-expanded="false" aria-controls="art-1">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Artículo 2 -->
+            <div class="col" data-categoria="css">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-css">
+                        <img src="imagenes/blog/css3.svg" alt="Logo de CSS3">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-primary align-self-start mb-2">CSS</span>
+                        <h3 class="card-title h5">Flexbox vs. Grid: cuándo usar cada uno</h3>
+                        <p class="card-text">
+                            Los dos sistemas de maquetación de CSS resuelven problemas distintos.
+                            Aprende a elegir el adecuado.
+                        </p>
+                        <div class="collapse" id="art-2">
+                            <p>
+                                <strong>Flexbox</strong> trabaja en una sola dimensión: una fila o una
+                                columna. Es ideal para barras de navegación, alinear botones o centrar un
+                                elemento con <code>justify-content</code> y <code>align-items</code>.
+                            </p>
+                            <p>
+                                <strong>Grid</strong> trabaja en dos dimensiones a la vez: filas y columnas.
+                                Es la mejor opción para la estructura general de una página o para galerías,
+                                por ejemplo con <code>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</code>.
+                            </p>
+                            <p>En la práctica se combinan: Grid para el esqueleto y Flexbox dentro de cada bloque.</p>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-09">9 sep 2026</time> · 5 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-2" aria-expanded="false" aria-controls="art-2">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Artículo 3 -->
+            <div class="col" data-categoria="javascript">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-js">
+                        <img src="imagenes/blog/javascript.svg" alt="Logo de JavaScript">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-warning align-self-start mb-2">JavaScript</span>
+                        <h3 class="card-title h5">JavaScript moderno en 5 minutos</h3>
+                        <p class="card-text">
+                            <code>let</code>, <code>const</code>, funciones flecha, plantillas de texto y
+                            módulos: lo esencial de ES6+.
+                        </p>
+                        <div class="collapse" id="art-3">
+                            <p>
+                                Olvida <code>var</code>: usa <code>const</code> para valores que no se
+                                reasignan y <code>let</code> para los que sí. Ambos respetan el ámbito de bloque.
+                            </p>
+                            <p>
+                                Las funciones flecha acortan el código: <code>const doble = n =&gt; n * 2;</code>.
+                                Las plantillas de texto permiten insertar variables:
+                                <code>`Hola, ${nombre}`</code>.
+                            </p>
+                            <p>
+                                Con los módulos (<code>import</code> / <code>export</code>) puedes dividir tu
+                                aplicación en archivos pequeños y reutilizables, cargándolos con
+                                <code>&lt;script type="module"&gt;</code>.
+                            </p>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-12">12 sep 2026</time> · 5 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-3" aria-expanded="false" aria-controls="art-3">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Artículo 4 -->
+            <div class="col" data-categoria="frameworks">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-bootstrap">
+                        <img src="imagenes/blog/bootstrap.svg" alt="Logo de Bootstrap">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-secondary align-self-start mb-2">Frameworks</span>
+                        <h3 class="card-title h5">Diseño responsivo con Bootstrap 5</h3>
+                        <p class="card-text">
+                            Cómo el sistema de grid de 12 columnas y los breakpoints te ayudan a
+                            adaptar una página a cualquier pantalla.
+                        </p>
+                        <div class="collapse" id="art-4">
+                            <p>
+                                Bootstrap divide cada fila en 12 columnas. Con clases como
+                                <code>col-12 col-md-6 col-lg-4</code> una tarjeta ocupa todo el ancho en el
+                                celular, la mitad en tablet y un tercio en computadora.
+                            </p>
+                            <p>
+                                Los breakpoints (<code>sm</code>, <code>md</code>, <code>lg</code>,
+                                <code>xl</code>, <code>xxl</code>) siguen el enfoque <em>mobile first</em>:
+                                primero diseñas para pantallas pequeñas y luego amplías.
+                            </p>
+                            <p>Este mismo portafolio usa ese grid en todas sus páginas.</p>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-16">16 sep 2026</time> · 4 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-4" aria-expanded="false" aria-controls="art-4">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Artículo 5 -->
+            <div class="col" data-categoria="frameworks">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-react">
+                        <img src="imagenes/blog/react.svg" alt="Logo de React">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-secondary align-self-start mb-2">Frameworks</span>
+                        <h3 class="card-title h5">Primeros pasos con React</h3>
+                        <p class="card-text">
+                            Componentes, props y estado: los tres conceptos que necesitas para
+                            empezar con la librería más usada del front-end.
+                        </p>
+                        <div class="collapse" id="art-5">
+                            <p>
+                                En React la interfaz se divide en <strong>componentes</strong>: funciones
+                                que devuelven JSX, una sintaxis parecida a HTML dentro de JavaScript.
+                            </p>
+                            <p>
+                                Las <strong>props</strong> son los datos que un componente recibe de su
+                                padre, y el <strong>estado</strong> (<code>useState</code>) guarda los datos que
+                                cambian con la interacción del usuario. Cuando el estado cambia, React
+                                vuelve a dibujar solo lo necesario.
+                            </p>
+                            <p>Para empezar un proyecto hoy, lo más sencillo es usar Vite: <code>npm create vite@latest</code>.</p>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-19">19 sep 2026</time> · 6 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-5" aria-expanded="false" aria-controls="art-5">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Artículo 6 -->
+            <div class="col" data-categoria="accesibilidad">
+                <article class="card h-100 tarjeta-proyecto">
+                    <div class="portada-blog portada-accesibilidad">
+                        <img src="imagenes/blog/accesibilidad.svg" alt="Símbolo de acceso universal">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge text-bg-info align-self-start mb-2">Accesibilidad</span>
+                        <h3 class="card-title h5">5 reglas básicas de accesibilidad web</h3>
+                        <p class="card-text">
+                            Pequeños cambios que hacen que tu sitio funcione para todas las personas,
+                            incluidas las que usan lector de pantalla o teclado.
+                        </p>
+                        <div class="collapse" id="art-6">
+                            <ol>
+                                <li>Toda imagen informativa necesita un <code>alt</code> descriptivo.</li>
+                                <li>El texto debe tener suficiente contraste con el fondo (mínimo 4.5:1 según WCAG).</li>
+                                <li>Todo debe poder usarse con el teclado, con un foco visible.</li>
+                                <li>Cada campo de formulario necesita su <code>&lt;label&gt;</code>.</li>
+                                <li>Usa HTML semántico antes que atributos ARIA.</li>
+                            </ol>
+                        </div>
+                        <p class="small text-body-secondary mt-auto mb-2">
+                            <time datetime="2026-09-23">23 sep 2026</time> · 3 min de lectura
+                        </p>
+                        <button class="btn btn-outline-success btn-sm align-self-start btn-leer" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#art-6" aria-expanded="false" aria-controls="art-6">
+                            Leer artículo
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <p class="small text-body-secondary">
+            Logos obtenidos de Wikimedia Commons; pertenecen a sus respectivos proyectos.
+        </p>
+
+        <h2 class="h4">Tecnologías utilizadas</h2>
+        <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">HTML5 semántico (article, section, time)</li>
+            <li class="list-group-item">Bootstrap (grid, cards, collapse, badges)</li>
+            <li class="list-group-item">CSS propio para las portadas de los artículos</li>
+            <li class="list-group-item">JavaScript para el filtro por categoría</li>
+        </ul>
+
+        <a href="portafolio.html" class="btn btn-outline-success">&larr; Volver al portafolio</a>
+    </main>
+
+    <footer class="text-center py-4" id="pie-pagina">
+        <p class="mb-0">&copy; 2026 Gerardo J. Medina. Proyecto académico — Northbridge University.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ---------- Filtro por categoría ----------
+        const botonesCategoria = document.querySelectorAll("#categorias button");
+        const articulos = document.querySelectorAll("#articulos .col");
+
+        botonesCategoria.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                botonesCategoria.forEach(function (b) { b.classList.remove("active"); });
+                boton.classList.add("active");
+
+                const categoria = boton.dataset.categoria;
+                articulos.forEach(function (articulo) {
+                    const visible = categoria === "todas" || articulo.dataset.categoria === categoria;
+                    articulo.classList.toggle("d-none", !visible);
+                });
+            });
+        });
+
+        // ---------- Texto del botón "Leer artículo" / "Cerrar artículo" ----------
+        document.querySelectorAll(".btn-leer").forEach(function (boton) {
+            const panel = document.querySelector(boton.dataset.bsTarget);
+            panel.addEventListener("show.bs.collapse", function () { boton.textContent = "Cerrar artículo"; });
+            panel.addEventListener("hide.bs.collapse", function () { boton.textContent = "Leer artículo"; });
+        });
+    </script>
+</body>
+</html>

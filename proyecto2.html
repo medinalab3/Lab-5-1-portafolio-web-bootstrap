@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- Página de detalle del proyecto 2: Estadísticas de fútbol -->
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de fútbol | GJ Medina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="menu-principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">GJ Medina</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+                        aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portafolio.html">Portafolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <article>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="portafolio.html">Portafolio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estadísticas de fútbol</li>
+                </ol>
+            </nav>
+
+            <span class="badge text-bg-success mb-2">App web</span>
+            <h1>Estadísticas de fútbol</h1>
+            <p class="lead">Tablas de posiciones de LaLiga (Primera División) y de la UEFA Champions League 2026-27.</p>
+
+            <h2 class="h4">Descripción</h2>
+            <p>
+                Proyecto de una aplicación web para consultar la clasificación de las
+                competiciones de fútbol. Muestra las tablas de posiciones con partidos
+                jugados, ganados, empatados y perdidos, goles a favor y en contra,
+                diferencia de goles y puntos, con colores que marcan las zonas de
+                clasificación y descenso. Las pestañas permiten cambiar de competición
+                sin salir de la página.
+            </p>
+
+            <!-- Pestañas para cambiar entre competiciones -->
+            <ul class="nav nav-tabs mt-4" id="pestanas-ligas" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="tab-laliga" data-bs-toggle="tab"
+                            data-bs-target="#panel-laliga" type="button" role="tab"
+                            aria-controls="panel-laliga" aria-selected="true">
+                        <img src="imagenes/logo-laliga.svg" class="logo-liga" alt="">LaLiga
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-champions" data-bs-toggle="tab"
+                            data-bs-target="#panel-champions" type="button" role="tab"
+                            aria-controls="panel-champions" aria-selected="false">
+                        <img src="imagenes/logo-champions.svg" class="logo-liga" alt="">Champions League
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content tabla-posiciones mb-4">
+                <!-- LaLiga -->
+                <section class="tab-pane fade show active pt-3" id="panel-laliga" role="tabpanel" aria-labelledby="tab-laliga">
+                    <h2 class="h5">LaLiga EA Sports 2026-27 — Primera División</h2>
+                    <p class="text-body-secondary small">Clasificación tras la jornada 7 (actualizada al 25 de septiembre de 2026).</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover align-middle text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col" class="text-start">Equipo</th>
+                                    <th scope="col" title="Partidos jugados">PJ</th>
+                                    <th scope="col" title="Ganados">G</th>
+                                    <th scope="col" title="Empatados">E</th>
+                                    <th scope="col" title="Perdidos">P</th>
+                                    <th scope="col" title="Goles a favor">GF</th>
+                                    <th scope="col" title="Goles en contra">GC</th>
+                                    <th scope="col" title="Diferencia de goles">DG</th>
+                                    <th scope="col">Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="zona-champions"><td>1</td><td class="text-start">Barcelona</td><td>7</td><td>7</td><td>0</td><td>0</td><td>31</td><td>7</td><td>+24</td><td class="fw-bold">21</td></tr>
+                                <tr class="zona-champions"><td>2</td><td class="text-start">Atlético de Madrid</td><td>7</td><td>5</td><td>1</td><td>1</td><td>16</td><td>7</td><td>+9</td><td class="fw-bold">16</td></tr>
+                                <tr class="zona-champions"><td>3</td><td class="text-start">Real Betis</td><td>7</td><td>5</td><td>1</td><td>1</td><td>9</td><td>7</td><td>+2</td><td class="fw-bold">16</td></tr>
+                                <tr class="zona-champions"><td>4</td><td class="text-start">Real Madrid</td><td>7</td><td>5</td><td>0</td><td>2</td><td>18</td><td>8</td><td>+10</td><td class="fw-bold">15</td></tr>
+                                <tr class="zona-europa"><td>5</td><td class="text-start">Sevilla</td><td>7</td><td>4</td><td>1</td><td>2</td><td>10</td><td>9</td><td>+1</td><td class="fw-bold">13</td></tr>
+                                <tr class="zona-conference"><td>6</td><td class="text-start">Alavés</td><td>7</td><td>3</td><td>2</td><td>2</td><td>11</td><td>6</td><td>+5</td><td class="fw-bold">11</td></tr>
+                                <tr><td>7</td><td class="text-start">Deportivo de La Coruña</td><td>7</td><td>2</td><td>4</td><td>1</td><td>10</td><td>8</td><td>+2</td><td class="fw-bold">10</td></tr>
+                                <tr><td>8</td><td class="text-start">Real Sociedad</td><td>7</td><td>3</td><td>1</td><td>3</td><td>9</td><td>13</td><td>-4</td><td class="fw-bold">10</td></tr>
+                                <tr><td>9</td><td class="text-start">Villarreal</td><td>7</td><td>2</td><td>2</td><td>3</td><td>13</td><td>12</td><td>+1</td><td class="fw-bold">8</td></tr>
+                                <tr><td>10</td><td class="text-start">Athletic Club</td><td>6</td><td>2</td><td>2</td><td>2</td><td>7</td><td>6</td><td>+1</td><td class="fw-bold">8</td></tr>
+                                <tr><td>11</td><td class="text-start">Getafe</td><td>7</td><td>2</td><td>2</td><td>3</td><td>4</td><td>7</td><td>-3</td><td class="fw-bold">8</td></tr>
+                                <tr><td>12</td><td class="text-start">Rayo Vallecano</td><td>7</td><td>2</td><td>2</td><td>3</td><td>11</td><td>16</td><td>-5</td><td class="fw-bold">8</td></tr>
+                                <tr><td>13</td><td class="text-start">Osasuna</td><td>7</td><td>1</td><td>4</td><td>2</td><td>8</td><td>6</td><td>+2</td><td class="fw-bold">7</td></tr>
+                                <tr><td>14</td><td class="text-start">Celta de Vigo</td><td>7</td><td>2</td><td>1</td><td>4</td><td>10</td><td>10</td><td>0</td><td class="fw-bold">7</td></tr>
+                                <tr><td>15</td><td class="text-start">Espanyol</td><td>7</td><td>2</td><td>1</td><td>4</td><td>11</td><td>21</td><td>-10</td><td class="fw-bold">7</td></tr>
+                                <tr><td>16</td><td class="text-start">Racing de Santander</td><td>6</td><td>1</td><td>2</td><td>3</td><td>8</td><td>12</td><td>-4</td><td class="fw-bold">5</td></tr>
+                                <tr><td>17</td><td class="text-start">Levante</td><td>7</td><td>1</td><td>2</td><td>4</td><td>11</td><td>17</td><td>-6</td><td class="fw-bold">5</td></tr>
+                                <tr class="zona-descenso"><td>18</td><td class="text-start">Elche</td><td>7</td><td>1</td><td>1</td><td>5</td><td>4</td><td>13</td><td>-9</td><td class="fw-bold">4</td></tr>
+                                <tr class="zona-descenso"><td>19</td><td class="text-start">Valencia</td><td>7</td><td>0</td><td>3</td><td>4</td><td>3</td><td>12</td><td>-9</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-descenso"><td>20</td><td class="text-start">Málaga</td><td>7</td><td>0</td><td>0</td><td>7</td><td>3</td><td>23</td><td>-20</td><td class="fw-bold">0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-inline small leyenda">
+                        <li class="list-inline-item"><span class="muestra zona-champions"></span>Champions League</li>
+                        <li class="list-inline-item"><span class="muestra zona-europa"></span>Europa League</li>
+                        <li class="list-inline-item"><span class="muestra zona-conference"></span>Conference League</li>
+                        <li class="list-inline-item"><span class="muestra zona-descenso"></span>Descenso</li>
+                    </ul>
+                </section>
+
+                <!-- Champions League -->
+                <section class="tab-pane fade pt-3" id="panel-champions" role="tabpanel" aria-labelledby="tab-champions">
+                    <h2 class="h5">UEFA Champions League 2026-27 — Fase liga</h2>
+                    <p class="text-body-secondary small">Clasificación tras la jornada 1 (10 de septiembre de 2026). 36 equipos, 8 partidos cada uno.</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover align-middle text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col" class="text-start">Equipo</th>
+                                    <th scope="col" title="Partidos jugados">PJ</th>
+                                    <th scope="col" title="Ganados">G</th>
+                                    <th scope="col" title="Empatados">E</th>
+                                    <th scope="col" title="Perdidos">P</th>
+                                    <th scope="col" title="Goles a favor">GF</th>
+                                    <th scope="col" title="Goles en contra">GC</th>
+                                    <th scope="col" title="Diferencia de goles">DG</th>
+                                    <th scope="col">Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="zona-champions"><td>1</td><td class="text-start">Paris Saint-Germain</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td><td>1</td><td>+5</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>2</td><td class="text-start">Bayern Múnich</td><td>1</td><td>1</td><td>0</td><td>0</td><td>5</td><td>0</td><td>+5</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>3</td><td class="text-start">Barcelona</td><td>1</td><td>1</td><td>0</td><td>0</td><td>5</td><td>1</td><td>+4</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>4</td><td class="text-start">Manchester United</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>0</td><td>+4</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>5</td><td class="text-start">Como</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1</td><td>+3</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>6</td><td class="text-start">Sporting CP</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>+2</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>7</td><td class="text-start">VfB Stuttgart</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>+2</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-champions"><td>8</td><td class="text-start">Manchester City</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>+2</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>9</td><td class="text-start">Aston Villa</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>2</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>10</td><td class="text-start">Lens</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>2</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>11</td><td class="text-start">Real Betis</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>2</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>12</td><td class="text-start">Borussia Dortmund</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>2</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>13</td><td class="text-start">Liverpool</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>14</td><td class="text-start">Real Madrid</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>15</td><td class="text-start">Arsenal</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>16</td><td class="text-start">AEK Atenas</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>+1</td><td class="fw-bold">3</td></tr>
+                                <tr class="zona-europa"><td>17</td><td class="text-start">Roma</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="fw-bold">1</td></tr>
+                                <tr class="zona-europa"><td>18</td><td class="text-start">Shakhtar Donetsk</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="fw-bold">1</td></tr>
+                                <tr class="zona-europa"><td>19</td><td class="text-start">Fenerbahçe</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="fw-bold">1</td></tr>
+                                <tr class="zona-europa"><td>20</td><td class="text-start">PSV Eindhoven</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="fw-bold">1</td></tr>
+                                <tr class="zona-europa"><td>21</td><td class="text-start">Villarreal</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-europa"><td>22</td><td class="text-start">Club Brujas</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-europa"><td>23</td><td class="text-start">Lille</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-europa"><td>24</td><td class="text-start">Slavia Praga</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>25</td><td class="text-start">Atlético de Madrid</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>26</td><td class="text-start">Inter de Milán</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>27</td><td class="text-start">LASK</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>28</td><td class="text-start">Napoli</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>-1</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>29</td><td class="text-start">Galatasaray</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>30</td><td class="text-start">Viking</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>-2</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>31</td><td class="text-start">Oporto</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>-2</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>32</td><td class="text-start">RB Leipzig</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>4</td><td>-3</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>33</td><td class="text-start">Feyenoord</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>5</td><td>-4</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>34</td><td class="text-start">Sabah</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>4</td><td>-4</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>35</td><td class="text-start">Slovan Bratislava</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>-5</td><td class="fw-bold">0</td></tr>
+                                <tr class="zona-descenso"><td>36</td><td class="text-start">Bodø/Glimt</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>5</td><td>-5</td><td class="fw-bold">0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-inline small leyenda">
+                        <li class="list-inline-item"><span class="muestra zona-champions"></span>Octavos de final (1.º–8.º)</li>
+                        <li class="list-inline-item"><span class="muestra zona-europa"></span>Play-off (9.º–24.º)</li>
+                        <li class="list-inline-item"><span class="muestra zona-descenso"></span>Eliminado (25.º–36.º)</li>
+                    </ul>
+                </section>
+            </div>
+
+            <p class="small text-body-secondary">
+                Fuentes: ESPN (LaLiga) y Wikipedia / UEFA.com (Champions League).
+            </p>
+
+            <h2 class="h4">Tecnologías utilizadas</h2>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">HTML5 semántico (tablas con encabezados accesibles)</li>
+                <li class="list-group-item">Bootstrap (tablas responsivas, pestañas, badges)</li>
+                <li class="list-group-item">CSS propio para las zonas de clasificación</li>
+            </ul>
+
+            <a href="portafolio.html" class="btn btn-outline-success">&larr; Volver al portafolio</a>
+        </article>
+    </main>
+
+    <footer class="text-center py-4" id="pie-pagina">
+        <p class="mb-0">&copy; 2026 Gerardo J. Medina. Proyecto académico — Northbridge University.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

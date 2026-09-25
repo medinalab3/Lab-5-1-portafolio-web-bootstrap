@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- Página de detalle del proyecto 1: Tienda online de cartas Topps de deportes -->
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de cartas Topps | GJ Medina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="menu-principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">GJ Medina</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+                        aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portafolio.html">Portafolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <!-- SEMÁNTICA HTML: <article> porque es contenido independiente y completo por sí solo -->
+        <article>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="portafolio.html">Portafolio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tienda de cartas Topps</li>
+                </ol>
+            </nav>
+
+            <span class="badge text-bg-success mb-2">E-commerce</span>
+            <h1>Tienda online de cartas Topps</h1>
+            <p class="lead">Tienda de práctica para comprar cartas coleccionables Topps de fútbol, béisbol, baloncesto y Fórmula 1.</p>
+
+            <h2 class="h4">Descripción</h2>
+            <p>
+                Maqueta de una tienda online de cartas coleccionables. El catálogo se organiza
+                en tarjetas de Bootstrap con el nombre del jugador, la colección, la rareza y el
+                precio. Se puede filtrar por deporte y añadir cartas a un carrito simulado que
+                muestra las unidades y el total. El diseño se adapta a computadoras, tablets y celulares.
+            </p>
+
+            <!-- Barra de la tienda: filtros por deporte y botón del carrito -->
+            <section class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 mb-3" aria-label="Filtros de la tienda">
+                <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por deporte" id="filtros">
+                    <button type="button" class="btn btn-outline-success active" data-deporte="todos">Todos</button>
+                    <button type="button" class="btn btn-outline-success" data-deporte="futbol">⚽ Fútbol</button>
+                    <button type="button" class="btn btn-outline-success" data-deporte="beisbol">⚾ Béisbol</button>
+                    <button type="button" class="btn btn-outline-success" data-deporte="baloncesto">🏀 Baloncesto</button>
+                    <button type="button" class="btn btn-outline-success" data-deporte="f1">🏎️ F1</button>
+                </div>
+                <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito">
+                    🛒 Carrito <span class="badge text-bg-light ms-1" id="contador-carrito">0</span>
+                </button>
+            </section>
+
+            <!-- Catálogo de cartas: cada columna lleva el deporte en data-deporte para el filtro -->
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-4" id="catalogo" aria-label="Catálogo de cartas">
+                <div class="col" data-deporte="futbol">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-futbol"><span class="marca">TOPPS</span><img src="imagenes/cartas/yamal.jpg" alt="Foto de Lamine Yamal"><span class="franja"><span class="jugador">Lamine Yamal</span><span class="equipo">FC Barcelona</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Lamine Yamal</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome UEFA Club Competitions · Refractor</p>
+                            <p class="fw-bold mb-2">$45.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Lamine Yamal – Topps Chrome UCC" data-precio="45">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="futbol">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-futbol"><span class="marca">TOPPS</span><img src="imagenes/cartas/mbappe.jpg" alt="Foto de Kylian Mbappé"><span class="franja"><span class="jugador">Kylian Mbappé</span><span class="equipo">Real Madrid</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Kylian Mbappé</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome UEFA Club Competitions · Base</p>
+                            <p class="fw-bold mb-2">$12.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Kylian Mbappé – Topps Chrome UCC" data-precio="12">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="beisbol">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-beisbol"><span class="marca">TOPPS</span><img src="imagenes/cartas/ohtani.jpg" alt="Foto de Shohei Ohtani"><span class="franja"><span class="jugador">Shohei Ohtani</span><span class="equipo">Los Angeles Dodgers</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Shohei Ohtani</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Series 1 · Gold Parallel /2025</p>
+                            <p class="fw-bold mb-2">$60.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Shohei Ohtani – Topps Series 1 Gold" data-precio="60">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="beisbol">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-beisbol"><span class="marca">TOPPS</span><img src="imagenes/cartas/judge.jpg" alt="Foto de Aaron Judge"><span class="franja"><span class="jugador">Aaron Judge</span><span class="equipo">New York Yankees</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Aaron Judge</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome · Base</p>
+                            <p class="fw-bold mb-2">$8.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Aaron Judge – Topps Chrome" data-precio="8">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="baloncesto">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-baloncesto"><span class="marca">TOPPS</span><img src="imagenes/cartas/wembanyama.jpg" alt="Foto de Victor Wembanyama"><span class="franja"><span class="jugador">Victor Wembanyama</span><span class="equipo">San Antonio Spurs</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Victor Wembanyama</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome Basketball · Refractor</p>
+                            <p class="fw-bold mb-2">$55.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Victor Wembanyama – Topps Chrome Refractor" data-precio="55">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="baloncesto">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-baloncesto"><span class="marca">TOPPS</span><img src="imagenes/cartas/curry.jpg" alt="Foto de Stephen Curry"><span class="franja"><span class="jugador">Stephen Curry</span><span class="equipo">Golden State Warriors</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Stephen Curry</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome Basketball · Base</p>
+                            <p class="fw-bold mb-2">$15.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Stephen Curry – Topps Chrome" data-precio="15">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="f1">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-f1"><span class="marca">TOPPS</span><img src="imagenes/cartas/verstappen.jpg" alt="Foto de Max Verstappen"><span class="franja"><span class="jugador">Max Verstappen</span><span class="equipo">Red Bull Racing</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Max Verstappen</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome Formula 1 · Refractor</p>
+                            <p class="fw-bold mb-2">$35.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Max Verstappen – Topps Chrome F1" data-precio="35">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-deporte="f1">
+                    <div class="card h-100 tarjeta-proyecto">
+                        <div class="carta-topps carta-f1"><span class="marca">TOPPS</span><img src="imagenes/cartas/hamilton.jpg" alt="Foto de Lewis Hamilton"><span class="franja"><span class="jugador">Lewis Hamilton</span><span class="equipo">Scuderia Ferrari</span></span></div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h6 mb-1">Lewis Hamilton</h3>
+                            <p class="card-text small text-body-secondary flex-grow-1">Topps Chrome Formula 1 · Base</p>
+                            <p class="fw-bold mb-2">$10.00</p>
+                            <button class="btn btn-success btn-sm btn-agregar" data-nombre="Lewis Hamilton – Topps Chrome F1" data-precio="10">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p class="small text-body-secondary">
+                Proyecto académico: la tienda es una simulación, no vende productos reales y no
+                está afiliada a Topps. Los precios son de ejemplo.
+            </p>
+            <p class="small text-body-secondary">
+                Fotos de los deportistas: Wikimedia Commons, con licencias libres
+                (autor y licencia en la página de cada foto):
+                <a href="https://commons.wikimedia.org/wiki/File:Lamine_Yamal_France_v_Spain_7.24.26-142.jpg">Yamal</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg">Mbappé</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:Dodgers_at_Nationals_(53677192000)_(cropped).jpg">Ohtani</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:Aaron_Judge_posing_with_Donald_Trump_2025-09-11_(cropped).jpg">Judge</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:Victor_Wembanyama_San_Antonio_Spurs_2024.jpg">Wembanyama</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:Stephen_Curry,_Olympic_Games_2024_(cropped).jpg">Curry</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_(medium_crop).jpg">Verstappen</a>,
+                <a href="https://commons.wikimedia.org/wiki/File:2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_Fanzone_Stage_(cropped).jpg">Hamilton</a>.
+            </p>
+
+            <h2 class="h4">Tecnologías utilizadas</h2>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">HTML5 semántico</li>
+                <li class="list-group-item">Bootstrap (grid, cards, botones, offcanvas)</li>
+                <li class="list-group-item">CSS propio para el diseño de las cartas</li>
+                <li class="list-group-item">JavaScript para el filtro por deporte y el carrito simulado</li>
+            </ul>
+
+            <a href="portafolio.html" class="btn btn-outline-success">&larr; Volver al portafolio</a>
+        </article>
+    </main>
+
+    <!-- Carrito simulado: panel lateral (offcanvas) de Bootstrap -->
+    <aside class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="titulo-carrito">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title h5" id="titulo-carrito">🛒 Tu carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <p class="text-body-secondary" id="carrito-vacio">El carrito está vacío.</p>
+            <ul class="list-group list-group-flush mb-3" id="lista-carrito"></ul>
+            <p class="d-flex justify-content-between fw-bold border-top pt-3 mt-auto">
+                <span>Total</span><span id="total-carrito">$0.00</span>
+            </p>
+            <button class="btn btn-outline-danger btn-sm mb-2" type="button" id="vaciar-carrito">Vaciar carrito</button>
+            <button class="btn btn-success" type="button" id="pagar">Pagar (simulado)</button>
+        </div>
+    </aside>
+
+    <footer class="text-center py-4" id="pie-pagina">
+        <p class="mb-0">&copy; 2026 Gerardo J. Medina. Proyecto académico — Northbridge University.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ---------- Filtro por deporte ----------
+        const botonesFiltro = document.querySelectorAll("#filtros button");
+        const cartas = document.querySelectorAll("#catalogo .col");
+
+        botonesFiltro.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                botonesFiltro.forEach(function (b) { b.classList.remove("active"); });
+                boton.classList.add("active");
+
+                const deporte = boton.dataset.deporte;
+                cartas.forEach(function (carta) {
+                    const visible = deporte === "todos" || carta.dataset.deporte === deporte;
+                    carta.classList.toggle("d-none", !visible);
+                });
+            });
+        });
+
+        // ---------- Carrito simulado ----------
+        // Cada entrada: { nombre, precio, cantidad }
+        const carrito = [];
+
+        function mostrarCarrito() {
+            const lista = document.getElementById("lista-carrito");
+            lista.innerHTML = "";
+            let total = 0;
+            let unidades = 0;
+
+            carrito.forEach(function (item) {
+                total += item.precio * item.cantidad;
+                unidades += item.cantidad;
+
+                const li = document.createElement("li");
+                li.className = "list-group-item d-flex justify-content-between px-0";
+                li.innerHTML = "<span>" + item.nombre + " <small class='text-body-secondary'>× " + item.cantidad + "</small></span>" +
+                               "<span>$" + (item.precio * item.cantidad).toFixed(2) + "</span>";
+                lista.appendChild(li);
+            });
+
+            document.getElementById("contador-carrito").textContent = unidades;
+            document.getElementById("total-carrito").textContent = "$" + total.toFixed(2);
+            document.getElementById("carrito-vacio").classList.toggle("d-none", carrito.length > 0);
+        }
+
+        document.querySelectorAll(".btn-agregar").forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                const nombre = boton.dataset.nombre;
+                const existente = carrito.find(function (item) { return item.nombre === nombre; });
+
+                if (existente) {
+                    existente.cantidad++;
+                } else {
+                    carrito.push({ nombre: nombre, precio: Number(boton.dataset.precio), cantidad: 1 });
+                }
+                mostrarCarrito();
+            });
+        });
+
+        document.getElementById("vaciar-carrito").addEventListener("click", function () {
+            carrito.length = 0;
+            mostrarCarrito();
+        });
+
+        document.getElementById("pagar").addEventListener("click", function () {
+            if (carrito.length === 0) {
+                alert("Agrega alguna carta antes de pagar.");
+                return;
+            }
+            alert("¡Gracias por tu compra! (Esta es una tienda simulada.)");
+            carrito.length = 0;
+            mostrarCarrito();
+        });
+    </script>
+</body>
+</html>
